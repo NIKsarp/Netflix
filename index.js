@@ -20,6 +20,36 @@ const createElement = (tagName, [...attribute], textContent) => {
 // --------------------------------------------
 
 // --------------------------------------------
+// Section-2 Start
+
+const section2 = (title, [...item]) => {
+  const mainTitle = createElement(`h2`, [[`class`, `main-title`]], title);
+  const section = document.getElementById(`section2`);
+  const ul = createElement(`ul`, [[`class`, `list`]]);
+  item.forEach(([href, src]) => {
+    const li = createElement(`li`, [[`class`, `li`]]);
+    const anchor = createElement(`a`, [[`class`, `anchor`]]);
+    const img = createElement(`img`, [
+      [`src`, src],
+      [`class`, `img`],
+    ]);
+    ul.append(li);
+    li.append(anchor);
+    anchor.append(img);
+  });
+  section.append(mainTitle, ul);
+};
+section2(`maintitle`, [
+  [`href`, `src/1st.jpg`],
+  [`href`, `src/1st.jpg`],
+  [`href`, `src/1st.jpg`],
+  [`href`, `src/1st.jpg`],
+]);
+
+// Section-2 End
+// --------------------------------------------
+
+// --------------------------------------------
 // Section-3 Start
 
 const section = (main, [...item]) => {

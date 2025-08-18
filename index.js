@@ -26,6 +26,9 @@ const section2 = (title, [...item]) => {
   const mainTitle = createElement(`h2`, [[`class`, `main-title`]], title);
   const section = document.getElementById(`section2`);
   const ul = createElement(`ul`, [[`class`, `list`]]);
+
+  let count = 0;
+
   item.forEach(([href, src]) => {
     const li = createElement(`li`, [[`class`, `li`]]);
     const anchor = createElement(`a`, [[`class`, `anchor`]]);
@@ -33,13 +36,23 @@ const section2 = (title, [...item]) => {
       [`src`, src],
       [`class`, `img`],
     ]);
+    count += 1;
+    const counter = createElement(`span`, [[`class`, `counter`]], count);
+
     ul.append(li);
     li.append(anchor);
-    anchor.append(img);
+    anchor.append(img, counter);
   });
+
   section.append(mainTitle, ul);
 };
 section2(`maintitle`, [
+  [`href`, `src/1st.jpg`],
+  [`href`, `src/1st.jpg`],
+  [`href`, `src/1st.jpg`],
+  [`href`, `src/1st.jpg`],
+  [`href`, `src/1st.jpg`],
+  [`href`, `src/1st.jpg`],
   [`href`, `src/1st.jpg`],
   [`href`, `src/1st.jpg`],
   [`href`, `src/1st.jpg`],
@@ -79,26 +92,26 @@ section(`More reasons to join`, [
   [
     `Enjoy on your TV`,
     `Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.`,
-    `first src`,
-    `alt attribute`,
+    ``,
+    ``,
   ],
   [
     `Download your shows to watch offline`,
     `Save your favourites easily and always have something to watch.`,
-    `second src`,
-    `alt attribute`,
+    ``,
+    ``,
   ],
   [
     `Watch everywhere`,
     `Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.`,
-    `third src`,
-    `alt attribute`,
+    ``,
+    ``,
   ],
   [
     `Create profiles for kids`,
     `Send kids on adventures with their favourite characters in a space made just for them — free with your membership.`,
-    `four src`,
-    `alt attribute`,
+    ``,
+    ``,
   ],
 ]);
 

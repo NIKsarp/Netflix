@@ -168,6 +168,51 @@ body {
 /* -------------------------------------------- */
 
 /* -------------------------------------------- */
+/* Section-2 Start */
+
+.section-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-2 ul {
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+
+  gap: 2rem;
+}
+
+.section-2 .anchor {
+  position: relative;
+  z-index: 1;
+}
+
+.section-2 .counter {
+  font-size: 9rem;
+  font-weight: bold;
+  position: absolute;
+  /* top: 0; */
+  bottom: 0;
+  left: -2rem;
+  color: #fffffe;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+
+  z-index: 0;
+
+  text-fill-color: red;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: red;
+}
+
+/* Section-2 End */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
 /* Section-3 Start */
 
 .section-3,

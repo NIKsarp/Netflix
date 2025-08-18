@@ -120,11 +120,13 @@ const section4 = (title, [...item]) => {
     const summaryTag = createElement(`summary`, [[`class`, `summary`]]);
     const faq = createElement(`h3`, [[`class`, `faq-title`]], faqTitle);
     const p = createElement(`p`, [[`class`, `faq-summary`]], summary);
+    const close = createElement(`span`, [[`class`, `close-icon`]], `❌`);
 
     ul.append(li);
     li.append(details);
     details.append(summaryTag, p);
     summaryTag.append(faq);
+    summaryTag.append(close);
   });
 
   return section;

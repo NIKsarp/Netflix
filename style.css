@@ -1,0 +1,269 @@
+/* -------------------------------------------- */
+/* HTML body Start */
+
+:root {
+  /* Layout & Spacing */
+  --gap: 0.75rem;
+
+  /* Color */
+  --white: #fffffe;
+  --black: #121212;
+
+  /* Theme */
+  --primary-theme: #000000;
+  --secondary-theme: ;
+
+  /* Typography */
+  --primary-font: Arial, sans-serif;
+  --secondary-font: "Bree Serif", serif;
+
+  /* Effects */
+  --transition: all 0.3s ease;
+  --overlay: rgb(0, 0, 0, 0.1);
+  --blur: blur(1rem) saturate(180%);
+  --shadow: 0 1px 2px #12121230, inset 1px 2px 3px #fffffe30;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  list-style: none;
+  color: currentColor;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primary-theme);
+  color: var(--white);
+  font-family: var(--primary-font);
+
+}
+
+/* HTML body End */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* Header Start */
+
+.header {
+  padding: 0 9.25rem;
+  height: 7.5rem;
+  display: flex;
+  color: var(--white);
+  height: 88px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .icon {
+  width: 9.25rem;
+  height: 2.5rem;
+  fill: #e50914;
+}
+
+.btn {
+  /* padding: 5px 9px; */
+  padding: 4px 16px;
+  min-width: auto;
+  min-height: 32px;
+  height: 32px;
+  font-size: 14px;
+  background-color: #e50914;
+  border-radius: 4px;
+  border-radius: calc(0.25rem - 0.0625rem);
+}
+
+.header .btn-group .inner {
+  border: 1px solid white;
+
+
+  font-size: 1rem;
+  padding: 6px 36px 6px 34px;
+  background-color: transparent;
+}
+
+/* Header End */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* Section-1 Start */
+
+.section-1 {
+  margin-top: 6rem;
+  /* height: 617.6px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+
+}
+
+.section-1 .box {
+  max-width: 36.75rem;
+
+}
+
+.section-1 h1 {
+  font-size: 56px;
+  text-align: center;
+  margin-bottom: 1rem;
+
+}
+
+.section-1 .box {
+  height: 281.2px;
+}
+
+.section-1 .box p {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
+
+.section-1 .form {
+  padding-top: 16px;
+}
+
+.section-1 .form #input {
+  min-height: 16px;
+  min-width: 16px;
+  caret-color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 1.5rem 1rem 0.5rem;
+}
+
+.section-1 .form .btn {
+
+  font-size: 1.5rem;
+}
+
+/* Section-1 End */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* Section-3 Start */
+
+.section-3,
+.section-4,
+.footer {
+  display: flex;
+  gap: var(--gap);
+
+  padding: 9.25rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-3 .container {
+  display: flex;
+  gap: var(--gap);
+
+  justify-content: center;
+}
+
+.section-3 .card {
+  width: 18rem;
+  height: 15rem;
+  padding: var(--gap);
+  border-radius: var(--gap);
+  /* background-image: linear-gradient(to top left, gray, navy); */
+  /* background-image: linear-gradient(to top left, #1c2147, #210f1a); */
+  background-image: linear-gradient(to top left, #210f1a, #1c2147);
+}
+
+.card .card-title,
+.main-title {
+  font-size: 24px;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.section-3 .card .card-text {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+
+}
+
+/* Section-3 End */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* Section-4 Start */
+.section-4 {}
+
+.section-4 .main-title {}
+
+.section-4 .faq-list {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  /* 989.091px */
+  /* width: 989.091px; */
+}
+
+.section-4 .faq-list-item {}
+
+.section-4 .details {
+  padding: 1.5rem;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+
+  font-size: 24px;
+  /* border-bottom: 2px solid red; */
+  background-color: #2d2d2d;
+}
+
+.section-4 .details.active .summary,
+.section-4 .details.active .faq-summary {
+  position: absolute;
+  top: 3rem;
+
+}
+
+
+.section-4 .faq-title {
+  font-weight: 400;
+}
+
+.section-4 .faq-summary {
+  /* padding: 2rem; */
+  padding: 2rem 0;
+}
+
+/* Section-4 End */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* Footer Start */
+.footer {
+  color: #ffffffb3;
+}
+
+.footer .footer .p-m {
+
+  margin-top: 36px;
+  padding: 3px;
+}
+
+.footer ul {
+  margin-top: 36px;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+/* Footer End */
+/* -------------------------------------------- */

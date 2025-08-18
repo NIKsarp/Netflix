@@ -44,7 +44,10 @@ body {
   background-color: var(--primary-theme);
   color: var(--white);
   font-family: var(--primary-font);
-
+  /* padding: 0 9.25rem; */
+  padding: clamp(0rem, 10vw, 9.25rem);
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* HTML body End */
@@ -53,7 +56,7 @@ body {
 /* Header Start */
 
 .header {
-  padding: 0 9.25rem;
+
   height: 7.5rem;
   display: flex;
   color: var(--white);
@@ -96,8 +99,8 @@ body {
 /* Section-1 Start */
 
 .section-1 {
-  margin-top: 6rem;
-  /* height: 617.6px; */
+  /* margin-top: 6rem; */
+  height: 617.6px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,7 +108,19 @@ body {
   display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
+  /* position: relative; */
+  background-color: #00000010;
+  z-index: 2;
+}
 
+.section-1::before {
+  content: '';
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  opacity: .4;
+  background-image: url(src/herosection.jpg);
 }
 
 .section-1 .box {
@@ -161,7 +176,7 @@ body {
   display: flex;
   gap: var(--gap);
 
-  padding: 9.25rem;
+
   flex-direction: column;
   justify-content: center;
 }
@@ -169,6 +184,7 @@ body {
 .section-3 .container {
   display: flex;
   gap: var(--gap);
+
 
   justify-content: center;
 }

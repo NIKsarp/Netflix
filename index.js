@@ -23,7 +23,7 @@ const section2 = (title, [...item]) => {
   const h2 = createElement(`h2`, title);
   const ul = createElement(`ul`);
 
-  // ClassName
+  // CLASSNAME
   h2.className = `main-title`;
   ul.className = `list`;
 
@@ -31,25 +31,25 @@ const section2 = (title, [...item]) => {
   let count = 1;
 
   item.forEach(([href, src]) => {
-    // Elements
+    // ELEMENTS
     const li = createElement(`li`);
     const a = createElement(`a`);
     const img = createElement(`img`);
     const span = createElement(`span`, count);
 
-    // ClassName
+    // CLASSNAME
     li.className = `li`;
     a.className = `anchor`;
     img.className = `img`;
     span.className = `counter`;
 
-    // Attribute
-    a.href = href;
+    // ATTRIBUTES
+    a.href = href || `#`;
     img.src = src;
 
     count += 1;
 
-    // Append Elements
+    // APPEND ELEMENTS
     ul.appendChild(li);
     li.appendChild(a);
     a.append(img, span);
@@ -79,35 +79,35 @@ section2(`Trending Now`, [
 const section3 = (main, [...item]) => {
   const section = document.getElementById(`section3`);
 
-  // Elements
+  // ELEMENTS
   const h2 = createElement(`h2`, main);
   const div = createElement(`div`);
 
-  // ClassName
+  // CLASSNAME
   h2.className = `main-title`;
   div.className = `container`;
 
-  // Append Elements
+  // APPEND ELEMENTS
   section.append(h2, div);
 
   item.forEach(([title, text, src, alt]) => {
-    // Elements
+    // ELEMENTS
     const card = createElement(`div`);
     const h3 = createElement(`h3`, title);
     const p = createElement(`p`, text);
     const img = createElement(`img`);
 
-    // ClassName
+    // CLASSNAME
     card.className = `card`;
     h3.className = `card-title`;
     p.className = `card-text`;
     img.className = `card-img`;
 
-    // Attributes
+    // ATTRIBUTES
     img.src = src;
     img.alt = alt;
 
-    // Append Elements
+    // APPEND ELEMENTS
     div.appendChild(card);
     card.append(h3, p, img);
   });
@@ -151,25 +151,25 @@ section3(`More reasons to join`, [
 const section4 = (title, [...item]) => {
   const section = document.getElementById(`section4`);
 
-  // Elements
+  // ELEMENTS
   const h2 = createElement(`h2`, title);
   const ul = createElement(`ul`);
 
-  // ClassName
+  // CLASSNAME
   h2.className = `main-title`;
   ul.className = `faq-list`;
 
-  // Append Elements
+  // APPEND ELEMENTS
   section.append(h2, ul);
 
   item.forEach(([title, summary]) => {
-    // Elements
+    // ELEMENTS
     const li = createElement(`li`);
     const h3 = createElement(`h3`, title);
     const p = createElement(`p`, summary);
     const close = createElement(`span`, `❌`);
 
-    // ClassName
+    // CLASSNAME
     li.className = `faq-list-item`;
     h3.className = `faq-title`;
     p.className = `faq-summary`;
@@ -180,7 +180,7 @@ const section4 = (title, [...item]) => {
       h3.classList.toggle(`active`);
     });
 
-    // Append Elements
+    // APPEND ELEMENTS
     ul.append(li);
     li.append(h3, close, p);
   });
@@ -234,22 +234,22 @@ const footer = ([...lists]) => {
     // Element
     const ul = createElement(`ul`);
 
-    // ClassName
+    // CLASSNAME
     ul.className = `list`;
 
     group.forEach(([href, text]) => {
-      // Elements
+      // ELEMENTS
       const li = createElement(`li`);
       const a = createElement(`a`, text);
 
-      // ClassName
+      // CLASSNAME
       li.className = `list-item`;
       a.className = `anchor`;
 
-      // Attributes
+      // ATTRIBUTES
       a.href = href || `#`;
 
-      // Append Elements
+      // APPEND ELEMENTS
       ul.append(li);
       li.append(a);
     });

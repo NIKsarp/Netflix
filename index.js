@@ -24,7 +24,7 @@ const section2 = (title, [...item]) => {
   const ul = createElement(`ul`);
 
   // CLASSNAME
-  h2.className = `main-title`;
+  h2.className = `main__title`;
   ul.className = `list`;
 
   // Counter for <img> tag
@@ -42,10 +42,10 @@ const section2 = (title, [...item]) => {
     img.src = src;
 
     // CLASSNAME
-    li.className = `li`;
-    a.className = `anchor`;
-    img.className = `img`;
-    span.className = `counter`;
+    li.className = `list__item`;
+    a.className = `list__link`;
+    img.className = `list__img`;
+    span.className = `list__counter`;
 
     count += 1;
 
@@ -84,7 +84,7 @@ const section3 = (main, [...item]) => {
   const div = createElement(`div`);
 
   // CLASSNAME
-  h2.className = `main-title`;
+  h2.className = `main__title`;
   div.className = `container`;
 
   // APPEND ELEMENTS
@@ -103,9 +103,9 @@ const section3 = (main, [...item]) => {
 
     // CLASSNAME
     card.className = `card`;
-    h3.className = `card-title`;
-    p.className = `card-text`;
-    img.className = `card-img`;
+    h3.className = `card__title`;
+    p.className = `card__text`;
+    img.className = `card__img`;
 
     // APPEND ELEMENTS
     div.appendChild(card);
@@ -156,8 +156,8 @@ const section4 = (title, [...item]) => {
   const ul = createElement(`ul`);
 
   // CLASSNAME
-  h2.className = `main-title`;
-  ul.className = `faq-list`;
+  h2.className = `main__title`;
+  ul.className = `faq__list`;
 
   // APPEND ELEMENTS
   section.append(h2, ul);
@@ -167,13 +167,13 @@ const section4 = (title, [...item]) => {
     const li = createElement(`li`);
     const h3 = createElement(`h3`, title);
     const p = createElement(`p`, summary);
-    const close = createElement(`span`, `❌`);
+    const span = createElement(`span`, `❌`);
 
     // CLASSNAME
-    li.className = `faq-list-item`;
-    h3.className = `faq-title`;
-    p.className = `faq-summary`;
-    close.className = `close-icon`;
+    li.className = `faq__list-item`;
+    h3.className = `faq__title`;
+    p.className = `faq__summary`;
+    span.className = `faq__close-icon`;
 
     // Click Event for <li> Tag
     li.addEventListener(`click`, () => {
@@ -182,7 +182,7 @@ const section4 = (title, [...item]) => {
 
     // APPEND ELEMENTS
     ul.append(li);
-    li.append(h3, close, p);
+    li.append(h3, span, p);
   });
 
   return section;
@@ -235,7 +235,7 @@ const footer = ([...lists]) => {
     const ul = createElement(`ul`);
 
     // CLASSNAME
-    ul.className = `list`;
+    ul.className = `footer__list`;
 
     group.forEach(([href, text]) => {
       // ELEMENTS
@@ -246,8 +246,8 @@ const footer = ([...lists]) => {
       a.href = href || `#`;
 
       // CLASSNAME
-      li.className = `list-item`;
-      a.className = `anchor`;
+      li.className = `footer__item`;
+      a.className = `footer__link`;
 
       // APPEND ELEMENTS
       ul.append(li);

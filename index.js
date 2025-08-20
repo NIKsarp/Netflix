@@ -37,15 +37,15 @@ const section2 = (title, [...item]) => {
     const img = createElement(`img`);
     const span = createElement(`span`, count);
 
+    // ATTRIBUTES
+    a.href = href || `#`;
+    img.src = src;
+
     // CLASSNAME
     li.className = `li`;
     a.className = `anchor`;
     img.className = `img`;
     span.className = `counter`;
-
-    // ATTRIBUTES
-    a.href = href || `#`;
-    img.src = src;
 
     count += 1;
 
@@ -97,15 +97,15 @@ const section3 = (main, [...item]) => {
     const p = createElement(`p`, text);
     const img = createElement(`img`);
 
+    // ATTRIBUTES
+    img.src = src;
+    img.alt = alt;
+
     // CLASSNAME
     card.className = `card`;
     h3.className = `card-title`;
     p.className = `card-text`;
     img.className = `card-img`;
-
-    // ATTRIBUTES
-    img.src = src;
-    img.alt = alt;
 
     // APPEND ELEMENTS
     div.appendChild(card);
@@ -242,12 +242,12 @@ const footer = ([...lists]) => {
       const li = createElement(`li`);
       const a = createElement(`a`, text);
 
+      // ATTRIBUTES
+      a.href = href || `#`;
+
       // CLASSNAME
       li.className = `list-item`;
       a.className = `anchor`;
-
-      // ATTRIBUTES
-      a.href = href || `#`;
 
       // APPEND ELEMENTS
       ul.append(li);

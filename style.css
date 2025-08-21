@@ -258,7 +258,7 @@ body {
   background-image: linear-gradient(to top left, #210f1a, #1c2147);
 }
 
-.card .card__title,
+.card__title,
 .main__title {
   font-size: 24px;
   margin-top: 1rem;

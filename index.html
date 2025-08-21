@@ -17,8 +17,12 @@
     <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <header class="header">
-      <div class="header__navbar-brand">
+    <header
+      itemscope
+      itemtype="https://schema.org/WPHeader"
+      role="banner"
+      class="header">
+      <div class="header__header__navbar-brand">
         <svg
           class="header__icon"
           viewBox="0 0 111 30"
@@ -36,7 +40,7 @@
           </g>
         </svg>
       </div> 
-      <div class="header__btn-group">
+      <div role="group" aria-label="User Authentication" class="header__btn-group">
         <select class="header__btn inner" >
           <option value="btn__language">English</option>
           <option value="btn__language">hindi</option>
